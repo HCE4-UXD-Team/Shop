@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Human Marketing Strategy</title>
+
+    <style>
+        /*custom font*/
+        @import url(https://fonts.googleapis.com/css?family=Futura);
+
+        /*basic reset*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+            /*Image only BG fallback*/
+
+            /*background = gradient + image pattern combo*/
+            background:
+                linear-gradient(90deg, rgba(2, 0, 36, 0.6) 0%, rgba(0, 212, 255, 0.6) 0%, rgba(19, 66, 106, 0.6) 0%);
+        }
+
+        body {
+            font-family: futura, arial, verdana;
+        }
+
+        /*form styles*/
+        #msform {
+            width: 600px;
+            margin: 50px auto;
+            text-align: center;
+            position: relative;
+        }
+
+        #msform fieldset {
+            background: white;
+            border: 0 none;
+            border-radius: 10px;
+            box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+            padding: 20px 30px;
+            box-sizing: border-box;
+            width: 80%;
+            margin: 0 10%;
+
+            /*stacking fieldsets above each other*/
+            position: relative;
+        }
+
+        /*Hide all except first fieldset*/
+        #msform fieldset:not(:first-of-type) {
+            display: none;
+        }
+
+        /*inputs*/
+        #msform input,
+        #msform textarea,
+        #msform select,
+        #msform option {
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: futura;
+            color: #2C3E50;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        /*buttons*/
+        #msform .action-button {
+            width: 100px;
+            background: #13426A;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 1px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px;
+        }
+
+        #msform .action-button:hover,
+        #msform .action-button:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+        }
+
+        /*headings*/
+        .fs-title {
+            font-weight: bold;
+            font-size: 15px;
+            text-transform: uppercase;
+            color: #13426A;
+            margin-bottom: 10px;
+        }
+
+        .fs-subtitle {
+            font-weight: bold;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        input::placeholder {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- multistep form -->
+        <form id="msform" name="simple-contact-form" accept-charset="utf-8"
+            action="https://formspree.io/ayaanshirazi@gmail.com" method="post">
+            <!-- fieldsets -->
+            <fieldset>
+                <h2 class="fs-title">Human Marketing Strategy Seminars</h2>
+                <!-- Name of Company -->
+                <input type="text" name="company" placeholder="Company" />
+                <!-- Clients First Name -->
+                <input type="text" name="firstN" placeholder="First Name" />
+                <!-- Clients Last Name -->
+                <input type="text" name="lastN" placeholder="Last Name" />
+                <!-- Clients Position -->
+                <input type="text" name="position" placeholder="Position" />
+                <!-- Clients Email -->
+                <input type="text" name="email" placeholder="Email" />
+                <!-- Clients Mobile Number -->
+                <input type="text" name="mobile" placeholder="Mobile Number" />
+                <!-- Clients Landline Number -->
+                <input type="text" name="landL" placeholder="Landline" />
+                <!-- Clients Postal Address -->
+                <input type="text" name="postal" placeholder="Postal Address" />
+                <!-- Clients Zip Code -->
+                <input type="text" name="zip" placeholder="Zip Code" />
+                <!-- Clients City -->
+                <input type="text" name="city" placeholder="City" />
+                <!-- Clients Country -->
+                <input type="text" name="country" placeholder="Country" />
+                <!-- Clients choice of products 
+                <input type="text" name="products" placeholder="Choice of Products" />
+                -->
+                <select id="cars" name="products">
+                    <option value="" disabled selected hidden>Select a Product</option>
+                    <option value="3month">3 Months of Support</option>
+                    <option value="2days">2 Day Seminar</option>
+                    <option value="2d3m">2 Day Seminar + 3 Months of Support</option>
+                    <option value="5d6m">5 Day Seminar + 6 Months of Support</option>
+                </select>
+                <input type="text" name="message" placeholder="Input a message" />
+
+                <input type="submit" name="submit" class="submit action-button" value="Submit" />
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>
